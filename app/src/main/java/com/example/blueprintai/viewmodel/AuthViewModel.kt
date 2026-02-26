@@ -44,6 +44,10 @@ class AuthViewModel @Inject constructor(
         }
     }
 
+    fun logout() {
+        repository.logout()
+    }
+
     sealed class AuthState {
         object Idle : AuthState()
         object Loading : AuthState()
